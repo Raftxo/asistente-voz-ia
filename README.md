@@ -9,6 +9,7 @@ MVP de un asistente de voz conversacional con interfaz estilo videollamada (Goog
 - **LLM**: Groq API (`llama-3.1-8b-instant`)
 - **STT (voz a texto)**: Web Speech API nativa del navegador
 - **TTS (texto a voz)**: `msedge-tts` (voces neuronales gratuitas de Microsoft Edge)
+- **Avatar animado**: https://www.vidnoz.com/
 
 ## 📁 Estructura del repositorio (monorepo)
 
