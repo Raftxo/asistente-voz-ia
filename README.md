@@ -31,7 +31,7 @@ asistente-voz-ia/
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/joscanoav/asistente-voz-ia.git
+git clone https://github.com/Raftxo/asistente-voz-ia.git
 cd asistente-voz-ia
 ```
 
