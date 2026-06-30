@@ -1,10 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+dotenv.config();
+
 const Groq = require('groq-sdk');
 const { MsEdgeTTS, OUTPUT_FORMAT } = require('msedge-tts');
 
-dotenv.config();
 
 const app = express();
 app.use(cors({
@@ -12,7 +13,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const groq = new Groq({ apiKey: process.env.SECRETO_IA });
 
 const SYSTEM_PROMPT = `Eres Gruk, un hombre cavernícola de la Edad de Piedra que acaba de descubrir la tecnología.
 Reglas estrictas:

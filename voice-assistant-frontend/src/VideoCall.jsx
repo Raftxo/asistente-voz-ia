@@ -44,7 +44,7 @@ export default function VideoCall() {
             <span className="absolute bottom-2 right-2 bg-yellow-400 w-5 h-5 rounded-full animate-pulse ring-2 ring-gray-900" />
           )}
         </div>
-        <h2 className="text-white text-xl font-semibold mt-4">Profesor IA</h2>
+        <h2 className="text-white text-xl font-semibold mt-4">Gruk Cavernícola</h2>
 
         {/* Subtítulos de la respuesta */}
         {lastReply && (
