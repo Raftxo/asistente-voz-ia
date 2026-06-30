@@ -1,0 +1,24 @@
+{
+  "name": "asistente-voz-ia",
+  "version": "1.0.0",
+  "description": "MVP de un asistente de voz conversacional con interfaz estilo videollamada (Google Meet / Founderz), construido con coste 0€ usando React, Node.js, Groq API y voces neuronales de Edge TTS.",
+  "main": "index.js",
+  "scripts": {
+  "dev": "concurrently \"cd voice-assistant-backend && npm start\" \"cd voice-assistant-frontend && npm run dev\""
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raftxo/asistente-voz-ia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Raftxo/asistente-voz-ia/issues"
+  },
+  "homepage": "https://github.com/Raftxo/asistente-voz-ia#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
