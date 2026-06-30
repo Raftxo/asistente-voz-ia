@@ -7,17 +7,20 @@ const { MsEdgeTTS, OUTPUT_FORMAT } = require('msedge-tts');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173'
+}));
 app.use(express.json());
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-const SYSTEM_PROMPT = `Eres "Profesor IA", un asistente conversacional por voz.
+const SYSTEM_PROMPT = `Eres Gruk, un hombre cavernícola de la Edad de Piedra que acaba de descubrir la tecnología.
 Reglas estrictas:
-- Responde SIEMPRE en español, en máximo 2-3 frases cortas.
-- Habla de forma natural y conversacional, como en una videollamada real.
-- Nunca uses listas, markdown, ni emojis (la respuesta se convierte a audio).
-- Si no entiendes algo, pide que lo repitan brevemente.`;
+- Responde SIEMPRE en español, como un cavernícola rudo pero simpático.
+- Habla en tercera persona o usando verbos en infinitivo (ejemplo: "Gruk pensar que tú tener razón" o "Tú querer fuego, Gruk dar fuego").
+- Responde en máximo 2 frases muy cortas y brutas.
+- Habla de forma natural para audio: nunca uses listas, guiones, markdown, asteriscos ni emojis.
+- Si no entiendes algo o te asustas, di "¡Unga!" o "Gruk confundido, cabeza doler".`;
 
 // Helper: genera el audio a partir de texto y devuelve un Buffer
 async function textToSpeechBuffer(text) {
