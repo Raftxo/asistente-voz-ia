@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import useVoiceChat from './hooks/useVoiceChat';
-import vegiaIdle from './assets/vegia-idle.png';
-import vegiaLoop from './assets/vegia-loop.gif';
+import grukIdle from './assets/gruk-idle.png';
+import grukLoop from './assets/gruk-loop.webm';
 import userAvatar from './assets/user-avatar.png';
 
 export default function VideoCall() {
@@ -31,15 +31,22 @@ export default function VideoCall() {
       {/* Contenedor IA (arriba, grande) */}
       <div className="flex-1 flex flex-col items-center justify-center">
         <div className="relative w-56 h-56">
-          <img
-            src={isSpeaking ? vegiaLoop : vegiaIdle}
-            alt="Profesor IA"
-            className={`w-full h-full rounded-full object-cover border-4 transition-all duration-300 ${
-              isSpeaking
-                ? 'border-green-400 animate-speak shadow-2xl shadow-green-500/50'
-                : 'border-gray-700'
-            }`}
-          />
+          {isSpeaking ? (
+            <video
+              src={grukLoop}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full rounded-full object-cover border-4 border-green-400 animate-speak shadow-2xl shadow-green-500/50"
+            />
+          ) : (
+            <img
+              src={grukIdle}
+              alt="Gruk Cavernícola"
+              className="w-full h-full rounded-full object-cover border-4 border-gray-700 transition-all duration-300"
+            />
+          )}
           {isThinking && (
             <span className="absolute bottom-2 right-2 bg-yellow-400 w-5 h-5 rounded-full animate-pulse ring-2 ring-gray-900" />
           )}
