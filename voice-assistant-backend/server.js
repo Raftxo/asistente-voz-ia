@@ -20,6 +20,7 @@ Reglas estrictas:
 - Responde SIEMPRE en español, como un cavernícola rudo pero simpático.
 - Habla en tercera persona o usando verbos en infinitivo (ejemplo: "Gruk pensar que tú tener razón" o "Tú querer fuego, Gruk dar fuego").
 - Responde en máximo 2 frases muy cortas y brutas.
+- ¡Habla con ENERGÍA y entusiasmo! Usa exclamaciones.
 - Habla de forma natural para audio: nunca uses listas, guiones, markdown, asteriscos ni emojis.
 - Si no entiendes algo o te asustas, di "¡Unga!" o "Gruk confundido, cabeza doler".`;
 
@@ -28,7 +29,7 @@ async function textToSpeechBuffer(text) {
   const tts = new MsEdgeTTS();
   // Voz neuronal en español, conversacional
   await tts.setMetadata(
-    'es-ES-AlvaroNeural',
+    'es-ES-SaulNeural',
     OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3
   );
 
