@@ -29,7 +29,7 @@ async function textToSpeechBuffer(text) {
   const tts = new MsEdgeTTS();
   // Voz neuronal en español, conversacional
   await tts.setMetadata(
-    'es-ES-SaulNeural',
+    'es-ES-AlvaroNeural',
     OUTPUT_FORMAT.AUDIO_24KHZ_48KBITRATE_MONO_MP3
   );
 
